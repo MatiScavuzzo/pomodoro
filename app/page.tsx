@@ -6,23 +6,35 @@ import { FocusState } from "./components/FocusState";
 import { Buttons } from "./components/Buttons";
 
 export default function Home() {
-  const [minutes, setMinutes] = useState<number>(25)
-  const [seconds, setSeconds] = useState<number>(0)
-  const [cicle, setCicle] = useState<number>(1)
-  const [focusTime, setFocusTime] = useState<boolean>(false)
-  const [shortPause, setShortPause] = useState<boolean>(false)
-  const [longPause, setLongPause] = useState<boolean>(false)
-  const [disabledPlay, setDisabledPlay] = useState<boolean>(false)
-  const [disabledPause, setDisabledPause] = useState<boolean>(false)
+  const [minutes, setMinutes] = useState<number>(25);
+  const [seconds, setSeconds] = useState<number>(0);
+  const [cicle, setCicle] = useState<number>(1);
+  const [focusTime, setFocusTime] = useState<boolean>(false);
+  const [shortPause, setShortPause] = useState<boolean>(false);
+  const [longPause, setLongPause] = useState<boolean>(false);
+  const [disabledPlay, setDisabledPlay] = useState<boolean>(false);
+  const [disabledPause, setDisabledPause] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   const play = () => {
-    console.log('play')
+    setIsPlaying(true);
+    setDisabledPlay(true);
   }
   const pause = () => {
-    console.log('pause')
+    setIsPlaying(false);
+    setDisabledPause(true);
+    setDisabledPlay(false);
   }
   const reload = () => {
-    console.log('reload')
+    setMinutes(25);
+    setSeconds(0);
+    setCicle(1);
+    setFocusTime(false);
+    setShortPause(false);
+    setLongPause(false);
+    setDisabledPlay(false);
+    setDisabledPause(false);
+    setIsPlaying(false);
   }
 
 
@@ -31,7 +43,7 @@ export default function Home() {
       <PomodoroContainer>
         <FocusState focusTime={focusTime} shortPause={shortPause} longPause={longPause} />
         <Clock minutes={minutes} seconds={seconds} />
-        <Buttons 
+        <Buttons
           play={play}
           pause={pause}
           reload={reload}
