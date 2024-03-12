@@ -97,7 +97,7 @@ export default function Home() {
   }, [isPlaying, seconds, minutes, focusTime])
 
   return (
-    <main className="flex h-auto flex-col items-center gap-2 justify-between p-24">
+    <main className="flex h-auto flex-col items-center gap-2 justify-between p-4 sm:p-24">
       <PomodoroContainer>
         <FocusState focusTime={focusTime} shortPause={shortPause} longPause={longPause} />
         <Clock minutes={minutes} seconds={seconds} />
