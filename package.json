@@ -38,6 +38,7 @@
   "description": "Pomodoro timer",
   "main": "dist/pomodoro.js",
   "repository": "https://github.com/MatiScavuzzo/pomodoro.git",
+  "homepage": "https://pomodoro-app-ms.vercel.app",
   "author": "MatiScavuzzo <mati.ntvg@hotmail.com>",
   "license": "MIT"
 }
