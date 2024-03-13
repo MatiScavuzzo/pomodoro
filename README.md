@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pomodoro App
 
-## Getting Started
+Una aplicación Pomodoro simple construida con Next.js.
 
-First, run the development server:
+## Descripción
+
+La aplicación Pomodoro es una herramienta de gestión del tiempo que utiliza un temporizador para dividir el trabajo en intervalos de tiempo separados por cortos descansos. Esta aplicación te ayuda a mantenerte enfocado y productivo durante tus sesiones de trabajo.
+
+## Características
+
+- Temporizador Pomodoro
+- Intervalos de trabajo y descanso
+- Indicador visual del estado actual (trabajo o descanso)
+- Controles de reproducción para iniciar, pausar y reiniciar el temporizador
+
+## Uso
+
+1. Clona el repositorio o instala la aplicación como una dependencia en tu proyecto.
+2. Importa el componente `Pomodoro` en tu aplicación y utilízalo donde desees mostrar el temporizador Pomodoro.
+3. Personaliza los intervalos de tiempo y los controles según tus necesidades.
+
+## Instalación
+
+Para instalar la aplicación Pomodoro en tu proyecto, ejecuta el siguiente comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install pomodoro-app
+```
+## Ejemplo
+
+```jsx
+import React from 'react';
+import Pomodoro from 'pomodoro-app';
+
+function App() {
+  return (
+    <div>
+      <h1>Mi Aplicación con Temporizador Pomodoro</h1>
+      <Pomodoro />
+    </div>
+  );
+}
+
+export default App;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contribución
+¡Contribuciones son bienvenidas! Si deseas mejorar la aplicación Pomodoro, por favor crea un PR o abre un issue en el repositorio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Licencia
+Este proyecto está bajo la licencia MIT.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Puedes personalizar este README según las características específicas de tu aplicación y cualquier información adicional que desees proporcionar.
