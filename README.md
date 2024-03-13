@@ -24,11 +24,11 @@ La aplicación Pomodoro es una herramienta de gestión del tiempo que utiliza un
 Para instalar la aplicación Pomodoro en tu proyecto, ejecuta el siguiente comando:
 
 ```bash
-npm install pomodoro-app
+npm install pomodoro-app-ms
 
 # or
 
-yarn add pomodoro-app
+yarn add pomodoro-app-ms
 ```
 ## Ejemplo
 
