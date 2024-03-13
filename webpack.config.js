@@ -10,6 +10,7 @@ module.exports = {
     filename: 'pomodoro.js',
     library: 'pomodoroMS',
     libraryTarget: 'umd',
+    globalObject: 'this',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
