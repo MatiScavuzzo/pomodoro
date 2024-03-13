@@ -25,6 +25,10 @@ Para instalar la aplicación Pomodoro en tu proyecto, ejecuta el siguiente coman
 
 ```bash
 npm install pomodoro-app
+
+# or
+
+yarn add pomodoro-app
 ```
 ## Ejemplo
 
