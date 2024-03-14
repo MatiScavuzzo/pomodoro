@@ -4,7 +4,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'production',
-  entry: './app/page.tsx',
+  entry: './app/layout.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'pomodoro.js',
@@ -30,6 +30,11 @@ module.exports = {
             ],
           },
         },
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   },
