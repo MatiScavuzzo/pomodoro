@@ -15,38 +15,9 @@ La aplicación Pomodoro es una herramienta de gestión del tiempo que utiliza un
 
 ## Uso
 
-1. Clona el repositorio o instala la aplicación como una dependencia en tu proyecto.
-2. Importa el componente `Pomodoro` en tu aplicación y utilízalo donde desees mostrar el temporizador Pomodoro.
-3. Personaliza los intervalos de tiempo y los controles según tus necesidades.
-
-## Instalación
-
-Para instalar la aplicación Pomodoro en tu proyecto, ejecuta el siguiente comando:
-
-```bash
-npm install pomodoro-app-ms
-
-# or
-
-yarn add pomodoro-app-ms
-```
-## Ejemplo
-
-```jsx
-import React from 'react';
-import Pomodoro from 'pomodoro-app';
-
-function App() {
-  return (
-    <div>
-      <h1>Mi Aplicación con Temporizador Pomodoro</h1>
-      <Pomodoro />
-    </div>
-  );
-}
-
-export default App;
-```
+1. Clona el repositorio.
+2. Importa el componente `PomodoroContainer` en tu aplicación y utilízalo donde desees mostrar el temporizador Pomodoro.
+3. Personaliza los intervalos de tiempo y los controles según tus necesidades. Personaliza el componente `Sign` con tus datos.
 
 ## Contribución
 ¡Contribuciones son bienvenidas! Si deseas mejorar la aplicación Pomodoro, por favor crea un PR o abre un issue en el repositorio.
