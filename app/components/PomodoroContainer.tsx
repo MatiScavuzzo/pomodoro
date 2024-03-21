@@ -101,7 +101,7 @@ export const PomodoroContainer = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying, seconds, minutes, focusTime])
   return (
-    <main className="flex flex-col items-center justify-between h-auto gap-2 p-4 sm:p-24">
+    <main className="flex flex-col w-full items-center justify-between h-auto gap-2 p-4 sm:p-24">
       <div className='flex flex-col items-center w-full px-6 pt-6 pb-2 text-black bg-white rounded-2xl justify'>
         <FocusState focusTime={focusTime} shortPause={shortPause} longPause={longPause} />
         <Clock minutes={minutes} seconds={seconds} />
