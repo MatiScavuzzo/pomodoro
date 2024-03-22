@@ -15,12 +15,32 @@ export const PomodoroContainer = ({
   const [focusTime, setFocusTime] = useState<boolean>(true);
   const [shortPause, setShortPause] = useState<boolean>(false);
   const [longPause, setLongPause] = useState<boolean>(false);
-  const [minutes, setMinutes] = useState<number>(25);
+  const [focusMinutes, setFocusMinutes] = useState<number>(25);
+  const [longPauseMinutes, setLongPauseMinutes] = useState<number>(15);
+  const [shortPauseMinutes, setShortPauseMinutes] = useState<number>(5);
+  const [minutes, setMinutes] = useState<number>(focusMinutes);
   const [seconds, setSeconds] = useState<number>(0);
   const [cicle, setCicle] = useState<number>(1);
   const [disabledPlay, setDisabledPlay] = useState<boolean>(false);
   const [disabledPause, setDisabledPause] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+
+  const focusTimeOptions = [25, 30, 35];
+  const longPauseOptions = [15, 20];
+  const shortPauseOptions = [5, 10];
+
+  const handleFocusTimeOptions = (option: number) => {
+    setFocusMinutes(option);
+    setMinutes(option);
+  }
+
+  const handleLongPauseOptions = (option: number) => {
+    setLongPauseMinutes(option);
+  }
+
+  const handleShortPauseOptions = (option: number) => {
+    setShortPauseMinutes(option);
+  }
 
   const play = () => {
     setIsPlaying(true);
@@ -32,7 +52,7 @@ export const PomodoroContainer = ({
     setDisabledPlay(false);
   }
   const reload = () => {
-    setMinutes(25);
+    setMinutes(focusMinutes);
     setSeconds(0);
     setCicle(1);
     setFocusTime(true);
@@ -60,11 +80,11 @@ export const PomodoroContainer = ({
       if (cicle % 4 === 0) {
         setLongPause(true);
         setCicle(1);
-        setMinutes(15);
+        setMinutes(longPauseMinutes);
       } else {
         setShortPause(true);
         setCicle((prevCicle) => prevCicle + 1);
-        setMinutes(5);
+        setMinutes(shortPauseMinutes);
       }
     }
   }
@@ -88,7 +108,7 @@ export const PomodoroContainer = ({
       } else {
         setLongPause(false);
       }
-      setMinutes(25);
+      setMinutes(focusMinutes);
     }
   }
 
