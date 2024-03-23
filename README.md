@@ -1,3 +1,6 @@
+
+![PomodoroImage](https://github.com/MatiScavuzzo/pomodoro/assets/35038097/3c2795bd-18eb-4d89-bc40-7961bf2bcbbe)
+
 # Pomodoro App
 
 Una aplicación Pomodoro simple construida con Next.js.
