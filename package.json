@@ -1,6 +1,6 @@
 {
   "name": "pomodoro-app-ms",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "private": false,
   "scripts": {
     "dev": "next dev",

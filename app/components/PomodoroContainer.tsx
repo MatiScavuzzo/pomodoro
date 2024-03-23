@@ -4,6 +4,8 @@ import { FocusState } from './FocusState';
 import { Clock } from './Clock';
 import { Buttons } from './Buttons';
 import { Sign } from './Sign';
+import { TimerSetter } from './TimerSetter';
+import { SettingButton } from './SettingButton';
 
 export const PomodoroContainer = ({
   srcGitHub = 'https://github.com/MatiScavuzzo',
@@ -24,6 +26,7 @@ export const PomodoroContainer = ({
   const [disabledPlay, setDisabledPlay] = useState<boolean>(false);
   const [disabledPause, setDisabledPause] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isSetting, setIsSetting] = useState<boolean>(false);
 
   const focusTimeOptions = [25, 30, 35];
   const longPauseOptions = [15, 20];
@@ -61,6 +64,14 @@ export const PomodoroContainer = ({
     setDisabledPlay(false);
     setDisabledPause(false);
     setIsPlaying(false);
+  }
+
+  const handleSetting = () => {
+    setIsSetting(true);
+  }
+
+  const handleSettingClose = () => {
+    setIsSetting(false);
   }
 
   const handleFocusTime = () => {
@@ -122,16 +133,28 @@ export const PomodoroContainer = ({
   }, [isPlaying, seconds, minutes, focusTime])
   return (
     <main className="flex flex-col w-full items-center justify-between h-auto gap-2 p-4 sm:p-24">
-      <div className='flex flex-col items-center w-full px-6 pt-6 pb-2 text-black bg-white rounded-2xl justify'>
+      <div className='relative flex flex-col items-center gap-2 w-full px-6 pt-6 pb-2 text-black bg-white rounded-2xl justify'>
         <FocusState focusTime={focusTime} shortPause={shortPause} longPause={longPause} />
         <Clock minutes={minutes} seconds={seconds} />
+        <TimerSetter
+          isSetting={isSetting}
+          focusMinutes={focusTimeOptions}
+          longPauseMinutes={longPauseOptions}
+          shortPauseMinutes={shortPauseOptions}
+          handleFocusMinutes={handleFocusTimeOptions}
+          handleLongPauseMinutes={handleLongPauseOptions}
+          handleShortPauseMinutes={handleShortPauseOptions}
+          handleClose={handleSettingClose} />
         <Buttons
           play={play}
           pause={pause}
           reload={reload}
           disabledPlay={disabledPlay}
           disabledPause={disabledPause} />
-        <Sign srcGitHub={srcGitHub} username={username} />
+        <div className='flex items-center justify-between w-full'>
+          <SettingButton handleOpen={handleSetting} />
+          <Sign srcGitHub={srcGitHub} username={username} />
+        </div>
       </div>
     </main>
   )

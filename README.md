@@ -11,6 +11,7 @@ La aplicación Pomodoro es una herramienta de gestión del tiempo que utiliza un
 - Temporizador Pomodoro
 - Intervalos de trabajo y descanso
 - Indicador visual del estado actual (trabajo o descanso)
+- Configuración personalizable de los intervalos de tiempo
 - Controles de reproducción para iniciar, pausar y reiniciar el temporizador
 
 ## Uso
@@ -20,10 +21,11 @@ La aplicación Pomodoro es una herramienta de gestión del tiempo que utiliza un
 3. Personaliza los intervalos de tiempo y los controles según tus necesidades. Personaliza el componente `Sign` con tus datos.
 
 ## Contribución
+
 ¡Contribuciones son bienvenidas! Si deseas mejorar la aplicación Pomodoro, por favor crea un PR o abre un issue en el repositorio.
 
 ## Licencia
-Este proyecto está bajo la licencia MIT.
 
+Proyecto bajo licencia MIT.
 
 Puedes personalizar este README según las características específicas de tu aplicación y cualquier información adicional que desees proporcionar.
