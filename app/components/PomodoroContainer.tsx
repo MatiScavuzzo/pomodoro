@@ -47,6 +47,7 @@ export const PomodoroContainer = ({
 
   const play = () => {
     setIsPlaying(true);
+    setDisabledPause(false);
     setDisabledPlay(true);
   }
   const pause = () => {
